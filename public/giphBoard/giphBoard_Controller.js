@@ -45,6 +45,7 @@ function Slide(url, slideText){
   this.slideID = slideID++;
 }
 
+
 //Main///////////
 
 // var firstGiph = new GiphBoard("ralph");

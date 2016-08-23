@@ -1,0 +1,22 @@
+{
+  "name": "giph_board",
+  "version": "1.0.0",
+  "description": "giph story board",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rforgeon/giphBoard.git"
+  },
+  "author": "ralph",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/rforgeon/giphBoard/issues"
+  },
+  "homepage": "https://github.com/rforgeon/giphBoard#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}

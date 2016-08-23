@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>
+    GiphBoard
+  </title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- //firebase auth// -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" /> -->
+  <!-- //// -->
+  <script src="http://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <script src="giphBoard/giphBoard_Controller.js" type="text/javascript"></script>
+  <script src="giphBoard/giphBoard_View.js" type="text/javascript"></script>
+  <link src="styles/custom.css" type="text/css" rel="stylesheet">
+  <!-- //Login Pop-up// -->
+  <script type="text/javascript" src="jquery.leanModal.min.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+  <link type="text/css" rel="stylesheet" href="styles/login.css" />
+  <!-- //// -->
+
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDLPZMRZ2OR87qiwCjf0MHmUSuC0Ib2u5A",
+      authDomain: "giphboard.firebaseapp.com",
+      databaseURL: "https://giphboard.firebaseio.com",
+      storageBucket: "giphboard.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- END FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
+
+   <script type="text/javascript">
+     // FirebaseUI config.
+     var uiConfig = {
+       // Query parameter name for mode.
+       'queryParameterForWidgetMode': 'mode',
+       // Query parameter name for sign in success url.
+       'queryParameterForSignInSuccessUrl': 'signInSuccessUrl',
+       'signInSuccessUrl': 'index.html',
+       'signInOptions': [
+         // Leave the lines as is for the providers you want to offer your users.
+         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        //  firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        //  firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+         firebase.auth.EmailAuthProvider.PROVIDER_ID
+       ],
+       // Terms of service url.
+       'tosUrl': '<your-tos-url>',
+       'callbacks': {
+         'signInSuccess': function(currentUser, credential, redirectUrl) {
+           // Do something.
+           // Return type determines whether we continue the redirect automatically
+           // or whether we leave that to developer to handle.
+           return true;
+         }
+       }
+     };
+
+     var ui = new firebaseui.auth.AuthUI(firebase.auth());
+     // The start method will wait until the DOM is loaded.
+
+     ui.start('#firebaseui-auth-container', uiConfig);
+
+   </script>
+</head>
+
+  <nav>
+    <a id="modal_trigger" href="#modal" class="btn">Login or SignUp</a>
+
+
+    <div id="modal" class="popupContainer" style="display:none;">
+                    <header class="popupHeader">
+                            <span class="header_title">Login</span>
+                            <span class="modal_close"><i class="fa fa-times"></i></span>
+
+                    </header>
+
+                    <section class="popupBody">
+                      <div id="firebaseui-auth-container">
+                      </div>
+                    </section>
+            </div>
+    </div>
+  </nav>
+
+<body>
+
+
+
+  <div id="giphContainer">
+
+</div>
+
+</body>
+
+
+<!-- LOGIN -->
+<script >
+$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+</script>
+
+
+<!-- END LOGIN -->
+</html>
