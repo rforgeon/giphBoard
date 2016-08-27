@@ -1,5 +1,8 @@
 .giphBoardContainer{
-
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .giph-profile-picture{
   background: #CBCBCB;
@@ -7,24 +10,33 @@
 }
 
 .front-giph{
+  /*margin-left: 200px;*/
   background: #C3C8CD;
   border: 1px solid #979797;
   box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50);
   border-radius: 4px;
+  width: 400px;
+  height: 450px;
 }
 .second-giph{
+  /*margin-left: 200px;*/
   opacity: 0.44;
   background: #C3C8CD;
   border: 1px solid #979797;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
   border-radius: 4px;
+  width: 350px;
+  height: 400px;
 }
 .third-giph{
+  /*margin-left: 200px;*/
   opacity: 0.67;
   background: #C3C8CD;
   border: 1px solid #979797;
   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
   border-radius: 4px;
+  width: 300px;
+  height: 400px;
 }
 .giph-title{
   background: #ACB2B8;
@@ -38,33 +50,3 @@
   font-size: 20px;
   color: #000000;
 }
-
-/* Rectangle 20: */
-background: #ACB2B8;
-border-radius: 2px;
-/* Rectangle 20: */
-opacity: 0.44;
-background: #C3C8CD;
-border: 1px solid #979797;
-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-border-radius: 4px;
-/* Rectangle 20: */
-opacity: 0.67;
-background: #C3C8CD;
-border: 1px solid #979797;
-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
-border-radius: 4px;
-/* Rectangle 20: */
-background: #C3C8CD;
-border: 1px solid #979797;
-box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50);
-border-radius: 4px;
-/* Oval 9: */
-background: #CBCBCB;
-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-/* Heart-128 Copy: */
-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-/* 53: */
-font-family: Helvetica;
-font-size: 20px;
-color: #000000;
