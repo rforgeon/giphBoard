@@ -5,45 +5,65 @@
   text-align: center;
 }
 .giph-profile-picture{
+  position: absolute;
+  z-index: 4;
+  left: 2%;
+  top: -6%;
+  border-radius: 50%;
   background: #CBCBCB;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  width: 3em;
 }
 
 .front-giph{
-  /*margin-left: 200px;*/
+  position: relative;
   background: #C3C8CD;
   border: 1px solid #979797;
   box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50);
   border-radius: 4px;
-  width: 400px;
-  height: 450px;
+  width: 250px;
+  height: 200px;
+  cursor: pointer;
+  z-index: 3;
 }
 .second-giph{
-  /*margin-left: 200px;*/
-  opacity: 0.44;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  opacity: 0.67;
   background: #C3C8CD;
   border: 1px solid #979797;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
   border-radius: 4px;
-  width: 350px;
-  height: 400px;
+  width: 230px;
+  height: 180px;
+  z-index: 2;
 }
 .third-giph{
-  /*margin-left: 200px;*/
-  opacity: 0.67;
+  position: absolute;
+  top: 43%;
+  left: 17%;
+  opacity: 0.44;
   background: #C3C8CD;
   border: 1px solid #979797;
   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
   border-radius: 4px;
-  width: 300px;
-  height: 400px;
+  width: 180px;
+  height: 130px;
+  z-index: 1;
 }
 .giph-title{
   background: #ACB2B8;
   border-radius: 2px;
 }
 .giphBoard-heart{
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  position: absolute;
+  left: 85%;
+  top: 85%;
+  width: 2.5em;
+  z-index: 4;
+  shadow: 0px 4px 8px 0px rgba(0,0,0,0.50);
+  color: #FFF;
 }
 .giphBoard-heart-value{
   font-family: Helvetica;
