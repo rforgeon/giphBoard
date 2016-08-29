@@ -1,6 +1,5 @@
 // <!-- FIREBASE -->
 
- <script type="text/javascript">
    // FirebaseUI config.
    var uiConfig = {
      // Query parameter name for mode.

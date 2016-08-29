@@ -29,8 +29,7 @@ $(document).ready(function(){
     //
     //              };
 
-    // giphsContainer[1][1].innerHTML = giphBoardExpandTemplate;
-
+     
   });
 
   var giphBoardExpandTemplate =
