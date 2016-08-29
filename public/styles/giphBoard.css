@@ -1,9 +1,10 @@
 .giphBoardContainer{
+  display:inline-block;
   position: relative;
   margin-top: 30px;
   margin-bottom: 20px;
-  text-align: center;
 }
+
 .giph-profile-picture{
   position: absolute;
   z-index: 4;
@@ -13,6 +14,11 @@
   background: #CBCBCB;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
   width: 3em;
+  cursor: pointer;
+}
+  .giph-profile-picture.large{
+    width: 5em;
+    top: -10%;
 }
 
 .front-giph{
@@ -26,6 +32,11 @@
   cursor: pointer;
   z-index: 3;
 }
+.front-giph.large{
+  z-index: 1;
+
+}
+
 .second-giph{
   position: absolute;
   top: 15%;
@@ -38,6 +49,27 @@
   width: 230px;
   height: 180px;
   z-index: 2;
+  /*-webkit-transform: scaleX(0.9) translateY(3rem);
+     -moz-transform: scaleX(0.9) translateY(3rem);
+     transform: scaleX(0.9) translateY(3rem);
+     -webkit-transition: all 0.25s ease-in-out;
+     -moz-transition: all 0.25s ease-in-out;
+     transition: all 0.25s ease-in-out;
+     -webkit-transition-delay: 0.2s;
+     -moz-transition-delay: 0.2s;
+     transition-delay: 0.2s;*/
+}
+.second-giph.large{
+  width: 250px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  opacity: 1;
+  box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50);
+  cursor: pointer;
+
 }
 .third-giph{
   position: absolute;
@@ -52,9 +84,21 @@
   height: 130px;
   z-index: 1;
 }
+.third-giph.large{
+  width: 250px;
+  height: 200px;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  opacity: 1;
+  box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50);
+  cursor: pointer;
+
+}
 .giph-title{
   background: #ACB2B8;
   border-radius: 2px;
+  text-align: left;
 }
 .giphBoard-heart{
   position: absolute;
@@ -64,9 +108,50 @@
   z-index: 4;
   shadow: 0px 4px 8px 0px rgba(0,0,0,0.50);
   color: #FFF;
+  cursor: pointer;
+}
+.giphBoard-heart.large{
+  left: 80%;
+  top: 80%;
+  width: 4em;
 }
 .giphBoard-heart-value{
+  position: absolute;
+  left: 87%;
+  top: 80%;
+  text: center;
+  z-index: 5;
   font-family: Helvetica;
-  font-size: 20px;
-  color: #000000;
+  font-size: 15px;
+  color: #FFF;
+  cursor: pointer;
+}
+.giphBoard-heart-value.large{
+  left: 81.5%;
+  top: 75%;
+  font-size: 25px;
+  color: #FFF;
+}
+
+@media (min-width: 200px) {
+  .giphBoard-heart-value.large{
+    left: 83%;
+    top: 78%;
+  }
+}
+@media (min-width: 540px) {
+  .giphBoard-heart-value.large{
+    left: 81.5%;
+    top: 77%;
+  }
+}
+@media (min-width: 792px) {
+  .giphBoard-heart-value.large{
+    left: 81.5%;
+    top: 75%;
+  }
+  .giph-profile-picture.large{
+    width: 5em;
+    top: -25%;
+}
 }
