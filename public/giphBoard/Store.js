@@ -1,4 +1,10 @@
-// <!-- FIREBASE -->
+/*
+//STORE
+
+//database CRUD operations
+
+//FIREBASE
+*/
 
    // FirebaseUI config.
    var uiConfig = {
@@ -30,3 +36,29 @@
    // The start method will wait until the DOM is loaded.
 
    ui.start('#firebaseui-auth-container', uiConfig);
+
+////Firebase CRUD/////////
+
+var giphBoardStore = new Firebase('https://giphboard.firebaseio.com');
+
+var giphBoardFromStore = giphBoardFromStore.child('giphBoardStore');
+
+
+var pushGiphBoardToStore function(giphBoard){
+giphBoardFromStore.push({
+  author: giphBoard.author,
+  slides: giphBoard.slides,
+  boardTitle: giphBoard.boardTitle,
+  likes: giphBoard.likes
+})
+};
+
+var slide = analytics.child('giphBoardFromStore');
+
+var pushSlideToGiphBoard function(slide){
+pushSlideToGiphBoard.push({
+  url: slide.url,
+  slideText: slide.slideText,
+  slideID: slide.slideID
+})
+};

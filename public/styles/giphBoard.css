@@ -95,6 +95,15 @@
   cursor: pointer;
 
 }
+.slide-text{
+  position: absolute;
+  text: center;
+  color: black;
+  size: 100px;
+  top: 20%;
+  left: 50%;
+  z-index: 5;
+}
 .giph-title{
   background: #ACB2B8;
   border-radius: 2px;

@@ -1,4 +1,7 @@
 /**
+
+//DISPATCHER
+
 Giphbord allows you to create a story board of multiple giphs.
 
 Information we want to store:
@@ -17,6 +20,8 @@ var slideID = 0;
 function GiphBoard(author){
   this.author = author;
   this.slides = [];
+  this.boardTitle = '';
+  this.likes = 0;
 }
 
 GiphBoard.prototype.addSlide = function(slide){
@@ -38,6 +43,13 @@ GiphBoard.prototype.moveSlide = function(fromIndex,toIndex){
   this.slides.splice(toIndex,0,slideIndex[0]);
 }
 
+GiphBoard.prototype.editTitle = function(title){
+  this.boardTitle = title;
+}
+
+GiphBoard.prototype.addLike = function(){
+  this.likes++;
+}
 
 function Slide(url, slideText){
   this.url = url;
