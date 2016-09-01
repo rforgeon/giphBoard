@@ -15,8 +15,9 @@ $(document).ready(function(){
     console.log("window load giphs");
     //find container on index
     var giphsContainer = document.getElementsByClassName('giphs-container')[0];
-    //locate firebase array of giphs
-    //TODO: add firebase gif array
+  //TODO: add gif array
+    //request the firebase array of giphs from Controller
+    //controller.getRecentGiphBoards(20);
     giphsContainer.innerHTML = '';
 
     for (var i = 0; i < 8; i++) { //TODO: for length of giphBoard array

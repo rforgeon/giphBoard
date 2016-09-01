@@ -39,6 +39,11 @@ render giphBoard objects and structure them with HTML
   ;
 
 
+  //TODO: use this instead of HTML strings
+  var giphBoard = document.createDocumentFragment();
+  var profilePic = document.createElement('img');
+  giphBoard.appendChild(profilePic);
+
   return html;
   }
   };
